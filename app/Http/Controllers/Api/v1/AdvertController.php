@@ -149,7 +149,7 @@ class AdvertController extends Controller
 
         // Update the ad with the new data
         $ad->fill($validatedData);
-        $ad->save();
+        $ad->update();
 
         // Return the updated ad
         return response()->json([
