@@ -2,7 +2,7 @@
 namespace App\Http\Controllers\Api\v1;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
+use Cloudinary\Cloudinary;
 use App\Models\Advert;
 use App\Models\AdvertRate;
 use App\Models\Booked;
@@ -47,7 +47,7 @@ class AdvertController extends Controller
 
         if(strtolower($request->mediaType) == 'picture'){
             $image = $request->media;
-            $cloudinary = Cloudinary::uploadApi()->upload($image, [
+            $cloudinary = app(Cloudinary::class)->uploadApi()->upload($image, [
                 'transformation' => [
                     [
                         'width' => $request->width,
@@ -61,7 +61,7 @@ class AdvertController extends Controller
         }
         elseif(strtolower($request->mediaType) == 'gif'){
             $gif = $request->media;
-            $cloudinary = Cloudinary::uploadApi()->upload($gif, [
+            $cloudinary = app(Cloudinary::class)->uploadApi()->upload($gif, [
                 "resource_type" => "auto",
                 "format" => "gif",
                 "transformation" => [
@@ -125,7 +125,7 @@ class AdvertController extends Controller
             // upload image to cloudinary
             if($request->mediaType == 'picture'){
                 $image = $request->media;
-                $cloudinary = Cloudinary::uploadApi()->upload($image, [
+                $cloudinary = app(Cloudinary::class)->uploadApi()->upload($image, [
                     'transformation' => [
                         [
                             'width' => $request->width,
@@ -138,7 +138,7 @@ class AdvertController extends Controller
                 $media_url = $returned['secure_url'];
             }elseif($request->mediaType == 'gif'){
                 $gif = $request->media;
-                $cloudinary = Cloudinary::uploadApi()->upload($gif, [
+                $cloudinary = app(Cloudinary::class)->uploadApi()->upload($gif, [
                     "resource_type" => "auto",
                     "format" => "gif"
                 ]);
@@ -313,7 +313,7 @@ class AdvertController extends Controller
         $booking = Booked::create([
             'user_id' => auth()->user()->id,
             'start_date' => $start_date,
-            'end_date' => $start_date->addDays($duration),
+            'end_date' => $start_date->addDays((int) $duration),
             'duration' => $duration,
             'currency_code' => $currency_code,
             'type' => $type,
