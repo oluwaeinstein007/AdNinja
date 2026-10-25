@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3ee7fd27ee97c18d83d60c8dddedcbf7",
+    "content-hash": "3639fc0dace17c918a792da22afaff2b",
     "packages": [
         {
             "name": "brick/math",
@@ -136,111 +136,39 @@
             "time": "2026-09-06T14:11:23+00:00"
         },
         {
-            "name": "cloudinary-labs/cloudinary-laravel",
-            "version": "2.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cloudinary-community/cloudinary-laravel.git",
-                "reference": "f331b770b277a75dbde3c61bf1e50096b3e68104"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cloudinary-community/cloudinary-laravel/zipball/f331b770b277a75dbde3c61bf1e50096b3e68104",
-                "reference": "f331b770b277a75dbde3c61bf1e50096b3e68104",
-                "shasum": ""
-            },
-            "require": {
-                "cloudinary/cloudinary_php": "^2.0",
-                "ext-json": "*",
-                "illuminate/support": "~6|~7|~8|^9.0|^10.0",
-                "php": "^8.0.2"
-            },
-            "require-dev": {
-                "mockery/mockery": "^1.1",
-                "orchestra/testbench": "~4|~5|~6|^7.0",
-                "phpunit/phpunit": "^8.0|^9.5.10",
-                "sempro/phpunit-pretty-print": "^1.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "CloudinaryLabs\\CloudinaryLaravel\\CloudinaryServiceProvider"
-                    ],
-                    "aliases": {
-                        "Cloudinary": "CloudinaryLabs\\CloudinaryLaravel\\Facades\\Cloudinary"
-                    }
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/Support/helpers.php"
-                ],
-                "psr-4": {
-                    "CloudinaryLabs\\CloudinaryLaravel\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Prosper Otemuyiwa",
-                    "email": "prosperotemuyiwa@gmail.com",
-                    "homepage": "https://github.com/unicodeveloper"
-                }
-            ],
-            "description": "A Laravel Cloudinary Package",
-            "homepage": "https://github.com/cloudinary-labs/cloudinary-laravel",
-            "keywords": [
-                "File Transformations",
-                "Media management",
-                "cloudinary",
-                "cloudinary-laravel",
-                "file uploads",
-                "laravel"
-            ],
-            "support": {
-                "issues": "https://github.com/cloudinary-devs/cloudinary-laravel/issues",
-                "source": "https://github.com/cloudinary-devs/cloudinary-laravel/tree/2.0.3"
-            },
-            "time": "2023-03-01T15:07:23+00:00"
-        },
-        {
             "name": "cloudinary/cloudinary_php",
-            "version": "2.11.0",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cloudinary/cloudinary_php.git",
-                "reference": "d7bf9ddb93be59053e4eb2cf6164ea5f8af77413"
+                "reference": "869acef9d7fd43bb3d71950501bb2382f4042848"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cloudinary/cloudinary_php/zipball/d7bf9ddb93be59053e4eb2cf6164ea5f8af77413",
-                "reference": "d7bf9ddb93be59053e4eb2cf6164ea5f8af77413",
+                "url": "https://api.github.com/repos/cloudinary/cloudinary_php/zipball/869acef9d7fd43bb3d71950501bb2382f4042848",
+                "reference": "869acef9d7fd43bb3d71950501bb2382f4042848",
                 "shasum": ""
             },
             "require": {
-                "cloudinary/transformation-builder-sdk": "^1",
+                "cloudinary/transformation-builder-sdk": "^2",
                 "ext-json": "*",
-                "guzzlehttp/guzzle": "^6.5.8|^7.4.5",
-                "guzzlehttp/promises": "^1.5.3|^2.0",
-                "guzzlehttp/psr7": "^1.9.1|^2.5",
-                "monolog/monolog": "^1|^2|^3",
-                "php": ">=5.6.0",
-                "psr/log": "^1|^2|^3",
-                "teapot/status-code": "^1|^2"
+                "guzzlehttp/guzzle": "^7.4.5|^8.0",
+                "guzzlehttp/promises": "^1.5.3|^2.0|^3.0",
+                "guzzlehttp/psr7": "^2.7|^3.0",
+                "monolog/monolog": "^2|^3",
+                "php": ">=8.0.0",
+                "psr/http-client": "^1.0",
+                "psr/log": "^2|^3"
             },
             "require-dev": {
-                "consolidation/robo": "~1",
                 "ext-dom": "*",
                 "ext-libxml": "*",
                 "ext-zip": "*",
                 "friendsofphp/php-cs-fixer": "*",
                 "phpmd/phpmd": "*",
-                "squizlabs/php_codesniffer": "3.*",
-                "symfony/phpunit-bridge": "^5.2"
+                "squizlabs/php_codesniffer": "*",
+                "symfony/http-client": "^5.4|^6.4|^7.0|^8.0",
+                "symfony/phpunit-bridge": "^7.2"
             },
             "type": "library",
             "autoload": {
@@ -269,37 +197,37 @@
             ],
             "support": {
                 "email": "info@cloudinary.com",
-                "issues": "https://github.com/cloudinary/cloudinary_php/issues"
+                "issues": "https://github.com/cloudinary/cloudinary_php/issues",
+                "source": "https://github.com/cloudinary/cloudinary_php/tree/3.3.0"
             },
-            "time": "2023-05-23T13:36:46+00:00"
+            "time": "2026-10-19T19:43:50+00:00"
         },
         {
             "name": "cloudinary/transformation-builder-sdk",
-            "version": "1.2.0",
+            "version": "2.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cloudinary/php-transformation-builder-sdk.git",
-                "reference": "145d0ebc9638a82ec09bed7de57ea89586839bba"
+                "reference": "e8de59409e8e3c6abc553d1713f82d1dc71ce212"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cloudinary/php-transformation-builder-sdk/zipball/145d0ebc9638a82ec09bed7de57ea89586839bba",
-                "reference": "145d0ebc9638a82ec09bed7de57ea89586839bba",
+                "url": "https://api.github.com/repos/cloudinary/php-transformation-builder-sdk/zipball/e8de59409e8e3c6abc553d1713f82d1dc71ce212",
+                "reference": "e8de59409e8e3c6abc553d1713f82d1dc71ce212",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "php": ">=5.6.0"
+                "php": ">=8.0.0"
             },
             "require-dev": {
-                "consolidation/robo": "~1",
                 "ext-dom": "*",
                 "ext-libxml": "*",
                 "ext-zip": "*",
                 "friendsofphp/php-cs-fixer": "*",
                 "phpmd/phpmd": "*",
-                "squizlabs/php_codesniffer": "3.*",
-                "symfony/phpunit-bridge": "^5.2"
+                "squizlabs/php_codesniffer": "*",
+                "symfony/phpunit-bridge": "^7.2"
             },
             "type": "library",
             "autoload": {
@@ -328,9 +256,10 @@
             ],
             "support": {
                 "email": "info@cloudinary.com",
-                "issues": "https://github.com/cloudinary/php-transformation-builder-sdk/issues"
+                "issues": "https://github.com/cloudinary/php-transformation-builder-sdk/issues",
+                "source": "https://github.com/cloudinary/php-transformation-builder-sdk/tree/2.1.5"
             },
-            "time": "2023-03-23T02:09:04+00:00"
+            "time": "2026-04-29T12:17:58+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -5629,58 +5558,6 @@
                 }
             ],
             "time": "2026-10-13T05:38:27+00:00"
-        },
-        {
-            "name": "teapot/status-code",
-            "version": "2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/teapot-php/status-code.git",
-                "reference": "1acbf508c63063b63d5c29be6a13c900923f4d2c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/teapot-php/status-code/zipball/1acbf508c63063b63d5c29be6a13c900923f4d2c",
-                "reference": "1acbf508c63063b63d5c29be6a13c900923f4d2c",
-                "shasum": ""
-            },
-            "require": {
-                "php": "~8.0.0 || ~8.1.0 || ~8.2.0"
-            },
-            "require-dev": {
-                "ergebnis/php-cs-fixer-config": "^5.5.2",
-                "vimeo/psalm": "^5.11.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Teapot\\StatusCode\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Barney Hanlon",
-                    "email": "barney@shrikeh.net"
-                },
-                {
-                    "name": "Andreas Möller",
-                    "email": "am@localheinz.com"
-                }
-            ],
-            "description": "PHP HTTP Response Status code library",
-            "homepage": "https://github.com/teapot-php/status-code",
-            "keywords": [
-                "http"
-            ],
-            "support": {
-                "issues": "https://github.com/teapot-php/status-code/issues",
-                "source": "https://github.com/teapot-php/status-code/tree/2.1.0"
-            },
-            "time": "2023-05-11T09:40:01+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
