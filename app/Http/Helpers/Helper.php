@@ -27,7 +27,7 @@ use Termwind\Components\Dd;
                     $createdDate = Carbon::parse($advert->created_at); // Parse the created_at date using Carbon
 
                     // Check if the ad is expired
-                    if ($createdDate->addDays($duration)->isPast()) {
+                    if ($createdDate->addDays((int) $duration)->isPast()) {
                         // If the ad is expired, delete it from the database
                         $advert->delete();
                     }

@@ -313,7 +313,7 @@ class AdvertController extends Controller
         $booking = Booked::create([
             'user_id' => auth()->user()->id,
             'start_date' => $start_date,
-            'end_date' => $start_date->addDays($duration),
+            'end_date' => $start_date->addDays((int) $duration),
             'duration' => $duration,
             'currency_code' => $currency_code,
             'type' => $type,
